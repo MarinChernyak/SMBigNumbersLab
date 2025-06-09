@@ -9,6 +9,17 @@ h2 {
     margin-left: 100px;
 
 }
+fieldset{
+    margin-left:100px;
+}
+.page_header {
+    color: #064aa8;
+    font-family: Rockwell;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-left: 100px;
+    display: block;
+}
 p{
     color:darkslateblue;
     font-family:'Arial Nova';
@@ -94,9 +105,15 @@ li{
     font-weight: bolder;
     display: block;
     width: 750px;
-    color: #000066;
+    color: darkslateblue;
     background-color: #cee7e9;
-    margin-left: 20px;
+    margin-left: 10px;
     border: 1px solid navy;
     border-radius: 5px;
+    min-height: 100px;
+}
+.err_message {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
 }

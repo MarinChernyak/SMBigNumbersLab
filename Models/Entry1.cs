@@ -16,6 +16,6 @@ namespace SMBigNumbersLab.Models
         public virtual string lblNumber1 { get { return "Number 1: "; } }
 
 
-
+       
     }
 }

@@ -13,8 +13,8 @@ namespace SMBigNumbersLab.Models
 
         [Required(ErrorMessage = "Index number required")]
         [RegularExpression(@"^[0-9]+$", ErrorMessage = "The entry must be numeric")]
-        public override String Number1 { get; set; }
-        public override String lblNumber1 { get { return "Index number:"; } }
+        public override string Number1 { get; set; }
+        public override string lblNumber1 { get { return "Enter a serial number of the series"; } }
         
         public void GetResult()
         {

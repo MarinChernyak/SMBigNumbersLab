@@ -10,19 +10,16 @@
 <fieldset>
         <div class="mb-3 ml-5">
             @* @Html.DisplayFor(model => model.lblNumber1, new {@class="form-label labels_of_controls"}) *@
-        <label for="Number1" class="form-label labels_of_controls">Enter a serial number of the series</label>
+        <label for="Number1" class="form-label labels_of_controls">@Model.lblNumber1</label>
         <input asp-for="Number1" type="text" class="form-control midium_txt" id="txtNum1" placeholder="Enter a number">
         </div>
-@*         <div class="BN_Edit">
-            @Html.TextBoxFor(model => model.Number1, new { style = "width: 490px;" })
-        </div> *@
-        <div class="BN_Error">
+    <div class="row err_message">
             @Html.ValidationMessageFor(model => model.Number1)
         </div>
 
 
     <div class="mb-3 ml-5">
-        @* @Html.DisplayFor(model => model.lblNumber1, new {@class="form-label labels_of_controls"}) *@
+
         <div class="row">
             <label for="lblNumber1" class="form-label labels_of_controls">Result:</label>
         </div>        
@@ -33,9 +30,6 @@
         </div>
     </div>
     <div class="mb-3 ml-5">
-@*         <div class="BN_Button" id="butResult">
-           Click for Result
-        </div> *@
         <button class="btn btn-primary" id="butResult">
             Click for Result
         </button>
