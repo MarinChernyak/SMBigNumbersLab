@@ -1,0 +1,54 @@
+﻿@model SMBigNumbersLab.Models.Entry1
+
+
+@{
+
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+}
+<link rel="stylesheet" href="~/css/BN.css" asp-append-version="true">
+<fieldset>
+        <div class="mb-3 ml-5">
+            @* @Html.DisplayFor(model => model.lblNumber1, new {@class="form-label labels_of_controls"}) *@
+        <label for="Number1" class="form-label labels_of_controls">Enter a serial number of the series</label>
+        <input asp-for="Number1" type="text" class="form-control midium_txt" id="txtNum1" placeholder="Enter a number">
+        </div>
+@*         <div class="BN_Edit">
+            @Html.TextBoxFor(model => model.Number1, new { style = "width: 490px;" })
+        </div> *@
+        <div class="BN_Error">
+            @Html.ValidationMessageFor(model => model.Number1)
+        </div>
+
+
+    <div class="mb-3 ml-5">
+        @* @Html.DisplayFor(model => model.lblNumber1, new {@class="form-label labels_of_controls"}) *@
+        <div class="row">
+            <label for="lblNumber1" class="form-label labels_of_controls">Result:</label>
+        </div>        
+        <div class="row">
+            <div class="dvResult">
+                @Model.Result
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 ml-5">
+@*         <div class="BN_Button" id="butResult">
+           Click for Result
+        </div> *@
+        <button class="btn btn-primary" id="butResult">
+            Click for Result
+        </button>
+    </div>
+</fieldset>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#butResult").on("click", function () {           
+            $("form").submit();
+        })
+        
+    })
+ </script>

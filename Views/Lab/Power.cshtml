@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Power";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Power</h1>
+@{
+    Html.BeginForm("GetPowerResult", "lab", FormMethod.Post);
+
+    @Html.RenderPartialAsync("_TwoNumbersInputForm");
+}

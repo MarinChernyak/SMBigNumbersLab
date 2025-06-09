@@ -1,0 +1,90 @@
+﻿h1 {
+    font-family: 'Courier New' , Courier, monospace;
+    font-size: 20pt;
+    color: #003399;
+    margin: 20px 110px;
+    font-weight: bold;
+}
+h2 {
+    font-family: 'Franklin Gothic Medium' , 'Arial Narrow' , Arial, sans-serif;
+    font-size: 15pt;
+    margin: 10px 105px;
+    color: #006699;
+}
+.BN_RowPage {
+    float: left;
+    width: 100%;
+    margin: 4px 7px 0 4px;
+   
+}
+.BN_Label {
+    float: left;
+    width: 95px;
+    text-align: right;
+    padding-right: 3px;
+    
+}
+.BN_Edit {
+    float: left;
+    margin-left:5px;
+}
+
+.BN_Button {
+    border: 1px solid #000080;
+    float: left;
+    margin: 10px 0 10px 102px;
+    background-color: #006699;
+    color: #FFFFFF;
+    padding: 3px 5px;
+}
+    .BN_Button:hover {
+    background-color: #97DDFF;
+    color: #000066;
+    border: 1px solid #000066;
+    cursor: pointer;
+}
+.BN_RezultLabel {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    color: #004A6F;
+    margin-top: 7px;
+    width: 95px;
+    text-align: right;
+    float: left;
+    font-style: normal;
+    font-weight: bolder;
+}
+.BN_RezultOut {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    color: #000066;
+    float: left;
+    width: 480px;
+    padding: 7px 5px 2px 5px;
+        background-color: #DFEBEC;
+    border: 1px solid #000080;
+    float: left;
+    min-height: 25px;
+    margin-left:8px;
+}
+.BN_Error {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 9pt;
+    color: #AB2E2E;
+        float: left;
+    margin-left:3px;
+}
+.BN_Action {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    color: #0046D9;
+    float:left;
+    margin-left:30px;
+    margin-top:10px;
+    margin-bottom:-10px;
+}
+.BN_Widelabel {
+    width:130px;
+}

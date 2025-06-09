@@ -1,0 +1,64 @@
+﻿@model SMBigNumbersLab.Models.Entry2
+
+<h2>Enter two numbers of any length and press the button</h2>
+
+@{
+
+    Html.AntiForgeryToken();
+    Html.ValidationSummary(true);
+}
+<link rel="stylesheet" href="~/css/BN.css" asp-append-version="true">
+<fieldset>
+
+</fieldset>
+<div class="mb-3">
+    <label for="Number1" class="form-label labels_of_controls">Code Url</label>
+    <input asp-for="Number1" type="text" class="form-control midium_txt" id="txtNumber1" placeholder="">
+</div>
+<div  class="BN_RowPage">
+    <div class="BN_Label">
+             @Html.DisplayFor(model => model.lblNumber1)
+        </div>
+        <div class="BN_Edit">
+            @Html.TextBoxFor(model => model.Number1, new { style = "width: 490px;" })
+        </div>
+        <div class="BN_Error">
+            @Html.ValidationMessageFor(model => model.Number1)
+        </div>
+  </div>      
+<div  class="BN_RowPage">
+    <div class="BN_Label">
+            @Html.DisplayFor(model => model.lblNumber2)
+        </div>
+        <div class="BN_Edit">
+            @Html.TextBoxFor(model => model.Number2, new { style = "width: 490px;" })
+         </div>
+        <div class="BN_Error">
+            @Html.ValidationMessageFor(model => model.Number2)
+        </div>
+</div>
+<div  class="BN_RowPage ">
+    <div class=" BN_ResultLabel">
+        @Html.DisplayFor(model => model.lblResult)
+    </div>
+    <div class="BN_ResultOut">
+         
+       @Model.Result
+    </div>
+</div>
+<div  class="BN_RowPage">
+    <div class="BN_Button" id="butResult">
+       Click for Result
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        $("#butResult").on("click", function () {           
+            $("form").submit();
+        })
+        
+    })
+ </script>

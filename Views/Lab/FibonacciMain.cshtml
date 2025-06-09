@@ -1,0 +1,17 @@
+﻿
+@model SMBigNumbersLab.Models.Fibonacci
+
+@{
+    ViewBag.Title = "Fibonacci Numbers ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Fibonacci Numbers</h2>
+<p class="col-7">The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, 
+    starting with 0 and 1. The sequence is often represented as 0, 1, 1, 2, 3, 5, 8, 13, 21, and so on.  
+    </p>
+@{
+    Html.BeginForm("GetResultFibonacci", "Lab", FormMethod.Post);
+
+    await Html.RenderPartialAsync("_OneNumInputForm");
+}
