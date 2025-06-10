@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SMBigNumbersLab.Models;
+using SMBigNumbersLab2.Models;
 using System.Reflection;
 
 namespace SMBigNumbersLab2.Controllers
@@ -40,5 +41,49 @@ namespace SMBigNumbersLab2.Controllers
             }
             return View("FibonacciMain", model);
         }
+
+        public IActionResult GeomProgression()
+        {
+            GProgression model = new GProgression();
+            return View("GProgression", model);
+        }
+        [HttpPost]
+        public IActionResult GetRezultGProgression(GProgression model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.GetResult();
+            }
+            return View("GProgression", model);
+        }
+        public ActionResult ArProgression()
+        {
+            AProgression model = new AProgression();
+            return View("AProgression", model);
+        }
+        [HttpPost]
+        public IActionResult GetRezultAProgression(AProgression model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.GetResult();
+            }
+            return View("AProgression", model);
+        }
+        public ActionResult GetPrimes()
+        {
+            PrimeSeeker model = new PrimeSeeker();
+            return View("PrimeSeekerView", model);
+        }
+        [HttpPost]
+        public IActionResult GetPrimes(PrimeSeeker model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.GetResult();
+            }
+            return View("PrimeSeekerView", model);
+        }
+
     }
 }

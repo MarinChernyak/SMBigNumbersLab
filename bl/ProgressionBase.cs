@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace SMBigNumbersLab.BL
+namespace SMBigNumbersLab2.bl
 {
     public abstract class ProgressionBase
     {

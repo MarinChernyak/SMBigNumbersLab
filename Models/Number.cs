@@ -10,7 +10,7 @@ namespace SMBigNumbersLab.Models
     {
         public int IsPositive { get; set; }
         public bool IsValid { get; set; }
-        public Number(String sNum = "")
+        public Number(string sNum = "")
         {
             IsPositive = 1;
             if (ValidateEntry(sNum))
@@ -19,7 +19,7 @@ namespace SMBigNumbersLab.Models
                 for (int i = 0; i < sNum.Length; ++i)
                 {
                     Int32 iVal = 0;
-                    String sVal = sNum[i].ToString();
+                    string sVal = sNum[i].ToString();
                     bool bRez = Int32.TryParse(sVal, out iVal);
                     if (Int32.TryParse(sVal, out iVal))
                     {
@@ -43,15 +43,15 @@ namespace SMBigNumbersLab.Models
                 }
             }
         }
-        public bool ValidateEntry(String sNum)
+        public bool ValidateEntry(string sNum)
         {
             IsValid = true;
-            if (!String.IsNullOrEmpty(sNum))
+            if (!string.IsNullOrEmpty(sNum))
             {
                 sNum = sNum.Trim();
                 for (int i = 0; i < sNum.Length; ++i)
                 {
-                    String s = sNum[i].ToString();
+                    string s = sNum[i].ToString();
                     int inum=0;
                     IsValid = int.TryParse(s, out inum);
                     if (!IsValid)
@@ -247,7 +247,7 @@ namespace SMBigNumbersLab.Models
         //Power
         public static Number operator ^(Number Base, Number Power)
         {
-            Number numRez = null;
+            Number? numRez = null;
 
             if (Base != null && Power != null)
             {
@@ -360,9 +360,9 @@ namespace SMBigNumbersLab.Models
             }
             return iShift;
         }
-        public override String ToString()
+        public override string ToString()
         {
-            String sOut = String.Empty;
+            string sOut = string.Empty;
             if (IsPositive < 0)
                 sOut = "-";
             for (int i = 0; i < Count; ++i)
@@ -372,12 +372,12 @@ namespace SMBigNumbersLab.Models
 
             return sOut;
         }
-        public virtual String ToStringFormated()
+        public virtual string ToStringFormated()
         {
             int iNumGroupsInLine = 0;
             int NUM_GROUP_LINE = 15;
             int iShift1 = Count % 3;
-            String sOut = String.Empty;
+            string sOut = string.Empty;
             int iGroupCount = 0;
             if (IsPositive < 0)
                 sOut = "-";

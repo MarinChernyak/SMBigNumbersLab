@@ -1,0 +1,12 @@
+﻿@model SMBigNumbersLab.Models.Progression
+
+
+<h2>Arithmetic Progression</h2>
+@{
+    ViewBag.Title = "Arithmetic Progression";
+    Layout = "~/Views/Shared/_Layout.cshtml"; 
+    Html.BeginForm("GetRezultAProgression", "Lab", FormMethod.Post);
+    await Html.RenderPartialAsync("_ProgressionView");
+}
+
+

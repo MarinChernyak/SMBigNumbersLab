@@ -1,0 +1,7 @@
+﻿<h2>Geometric Progression</h2>
+@{
+    ViewBag.Title = "Geometric Progression";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Html.BeginForm("GetRezultGProgression", "Lab", FormMethod.Post);
+    await Html.RenderPartialAsync("_ProgressionView");
+}

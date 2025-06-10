@@ -1,4 +1,5 @@
 ﻿using SMBigNumbersLab.BL;
+using SMBigNumbersLab2.bl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ namespace SMBigNumbersLab.Models
 {
     public class AProgression :Progression
     {
-        public override String ProgrKind { get { return "Ariphmetic Progression"; } }
+        public override string ProgrKind { get { return "Ariphmetic Progression"; } }
         public override void GetResult()
         {
             ProgressionA bl = new ProgressionA(First,CommonDiff,NumSteps);

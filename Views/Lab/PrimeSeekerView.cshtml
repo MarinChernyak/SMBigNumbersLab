@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Power";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="page_header">Power</div>
+
+<p class="col-7">
+    Enter a start and an end of the кфтпу to serch. Those numbers can be as big as you want
+</p>
+
+@{
+    Html.BeginForm("GetPrimes", "lab", FormMethod.Post);
+
+    await Html.RenderPartialAsync("_TwoNumbersInputForm");
+}

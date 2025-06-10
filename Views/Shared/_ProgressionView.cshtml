@@ -1,0 +1,65 @@
+﻿@model SMBigNumbersLab.Models.Progression
+
+<h2>Enter a first member of a progression, common difference and a number steps</h2>
+
+<fieldset>
+    <div class="mb-3 ml-5">
+        <label for="lblFirst" class="form-label labels_of_controls">@Model.lblFirst</label>
+        <input asp-for="First" type="text" class="form-control midium_txt" id="txtFirst" placeholder="Enter a first number">
+    </div>
+    <div class="row err_message">
+        @Html.ValidationMessageFor(model => model.First)
+    </div>
+    <div class="mb-3">
+        <label for="lblComDiff" class="form-label labels_of_controls">@Model.lblComDiff</label>
+        <input asp-for="CommonDiff" type="text" class="form-control midium_txt" id="txtCommonDiff" placeholder="Enter a common difference">
+    </div>
+    <div class="row err_message">
+        @Html.ValidationMessageFor(model => model.CommonDiff)
+    </div>
+    <div class="mb-3">
+        <label for="lblNumSteps" class="form-label labels_of_controls">@Model.lblNumSteps</label>
+        <input asp-for="NumSteps" type="text" class="form-control midium_txt" id="txtNumSteps" placeholder="Enter a number of steps">
+    </div>
+    <div class="row err_message">
+        @Html.ValidationMessageFor(model => model.NumSteps)
+    </div>
+
+
+    <div class="mb-3 ml-5">
+        <div class="row">
+            <label for="lblLast" class="form-label labels_of_controls">Last member:</label>
+        </div>
+        <div class="row">
+            <div class="dvResult">
+                @Model.Last
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 ml-5">
+        <div class="row">
+            <label for="lbSum" class="form-label labels_of_controls">Sum of the progression:</label>
+        </div>
+        <div class="row">
+            <div class="dvResult">
+                @Model.Sum
+            </div>
+        </div>
+    </div>
+    <div class="mb-3 ml-5">
+        <button class="btn btn-primary" id="butResult">
+            Click for Result
+        </button>
+    </div>
+</fieldset>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#butRezult").on("click", function () {
+            $("form").submit();
+        })
+
+    })
+ </script>
