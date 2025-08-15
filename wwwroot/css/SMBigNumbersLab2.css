@@ -1,4 +1,8 @@
-﻿body {
+﻿@font-face {
+    font-family: Algerian;
+    src: url('../fonts/ALGER.TTF'); 
+}
+body {
     background-color: #458BBA;
 }
 h2 {
@@ -37,7 +41,7 @@ p{
         font-weight: bold;
         color: darkblue;
         font-family:Algerian;
-        margin-left:100px;
+        margin-left:50px;
 
     }
 a{
@@ -54,6 +58,7 @@ a{
     font-family: Algerian;
     text-align:center;
     display:block;
+    width:100%;
 }
 .logo {
     color: #064aa8;
@@ -89,38 +94,60 @@ li{
     font-weight: normal;
 }
 .midium_txt {
-    width: 500px;
-}
-.BN_ResultOut {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: medium;
-    font-weight: bold;
-    color: #000066;
-    display:block;
-    width: 750px;
-    padding: 7px 5px 2px 5px;
-    background-color: #cee7e9;
-    border: 1px solid navy;
-    border-radius:5px;
-    float: left;
-    min-height: 255px;
-    
+    width: 75%;
 }
 .dvResult {
     font-family: Arial, Helvetica, sans-serif;
     font-size: x-large;
     font-weight: bolder;
-    display: block;
-    width: 750px;
+    display: flex;
+    width: 75%;
     color: darkslateblue;
     background-color: #cee7e9;
     margin-left: 10px;
     border: 1px solid navy;
     border-radius: 5px;
     min-height: 100px;
+    word-break: break-all;
+}
+@media only screen and (min-width: 1100px) {
+    .dvResult {
+        width: 40%;
+    }
+    .midium_txt {
+        width: 40%;        
+    }
 }
 .err_message {
     color: red;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
+}
+.MainArticle {
+    width: 100%;
+    flex: 1 0 auto;
+}
+.img_room {
+    padding: 10px;
+    width: 25%;
+    display: inline-block;
+    vertical-align: top;
+}
+    .img_room img {
+        aspect-ratio: auto;
+        width: 100%;
+        display: block;
+    }
+.texts_container {
+    display: inline-block;
+    width:65%;
+    min-height:80%;
+    height:80%;
+    margin-top:5%;
+}
+.explanation
+{
+    display:block;
+    width:90%;
+    margin: 0 auto;
 }

@@ -4,10 +4,10 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	  <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\css\BN.css" />
     <Content Remove="wwwroot\css\site.css" />
   </ItemGroup>
 

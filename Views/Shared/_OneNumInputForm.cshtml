@@ -6,10 +6,8 @@
     Html.AntiForgeryToken();
     Html.ValidationSummary(true);
 }
-<link rel="stylesheet" href="~/css/BN.css" asp-append-version="true">
 <fieldset>
         <div class="mb-3 ml-5">
-            @* @Html.DisplayFor(model => model.lblNumber1, new {@class="form-label labels_of_controls"}) *@
         <label for="Number1" class="form-label labels_of_controls">@Model.lblNumber1</label>
         <input asp-for="Number1" type="text" class="form-control midium_txt" id="txtNum1" placeholder="Enter a number">
         </div>
